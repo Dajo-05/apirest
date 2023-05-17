@@ -28,6 +28,8 @@ public class Empleados {
     @ManyToOne
     @JoinColumn (name = "IdPais")
     private Pais pais;
+    
+    public Empleados(){}
 
     public Empleados(String primerNombre, String primerApellido, String otroNombre, String paisEmpleo, String correo, Pais pais) {
         this.primerNombre = primerNombre;
