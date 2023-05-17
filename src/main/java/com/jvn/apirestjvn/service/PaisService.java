@@ -16,19 +16,21 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.query.FluentQuery;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author David
  */
+@Service
 public class PaisService implements PaisRepository {
-    
+        @Autowired
     private PaisRepository paisRepo;
     
-    @Autowired
+   /* @Autowired
     public PaisService(@Lazy  PaisRepository paisRepo){
         this.paisRepo = paisRepo;
-    }
+    }*/
 
     @Override
     public void flush() {

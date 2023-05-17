@@ -19,17 +19,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping ("/pais/")
 public class PaisRest {
-    
+        @Autowired
     private PaisService paisService;
     
-    @Autowired
+   /* @Autowired
     public PaisRest(@Lazy  PaisService paisService){
         this.paisService = paisService;
-    }
+    }*/
     
-    @GetMapping
+    @RequestMapping
     private ResponseEntity<List<Pais>> getAllPaises(){
-           registration.setDispatchOptionsRequest(true);
         return ResponseEntity.ok(paisService.findAll());
     }
     

@@ -1,5 +1,6 @@
 package com.jvn.apirestjvn.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,8 +18,10 @@ public class Pais {
      @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+     @Column (name = "nombre_pais")
     private String nombrePais;
 
+       public Pais() {}
     public Pais(String nombrePais) {
         this.nombrePais = nombrePais;
     }
