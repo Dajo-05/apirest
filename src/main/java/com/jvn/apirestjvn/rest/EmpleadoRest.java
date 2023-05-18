@@ -2,9 +2,14 @@ package com.jvn.apirestjvn.rest;
 
 import com.jvn.apirestjvn.model.Empleados;
 import com.jvn.apirestjvn.service.EmpleadoService;
+import java.net.URI;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author David
  */
-
+@CrossOrigin( origins = {"http://localhost:4200"})
 @RestController
 @RequestMapping ("/empleados/")
 public class EmpleadoRest {
@@ -23,6 +28,16 @@ public class EmpleadoRest {
      @RequestMapping
     private ResponseEntity<List<Empleados>> getAllEmpleados (){
         return ResponseEntity.ok(empleadoService.findAll());
+    }
+    
+     @PostMapping
+    private ResponseEntity<Empleados> saveUsuario(@RequestBody Empleados user){
+        try {
+            Empleados usuarioGuardado = empleadoService.save(user);
+            return ResponseEntity.created(new URI("/empleados/"+usuarioGuardado.getIdEmpleado())).body(usuarioGuardado) ;
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        }
     }
     
 }
