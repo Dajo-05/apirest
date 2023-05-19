@@ -18,7 +18,7 @@ public class Empleados {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int idEmpleado;
+    private Long idEmpleado;
     private String primerNombre;
     private String primerApellido;
     private String otroNombre;
@@ -42,11 +42,11 @@ public class Empleados {
     
      
 
-    public int getIdEmpleado() {
+    public Long getIdEmpleado() {
         return idEmpleado;
     }
 
-    public void setIdEmpleado(int idEmpleado) {
+    public void setIdEmpleado(Long idEmpleado) {
         this.idEmpleado = idEmpleado;
     }
 
