@@ -2,12 +2,12 @@
 
 ## Importar la base de Datos
 
-## NOTA IMPORTANTE: el gestor de base de datos sado fue MYSQL lo cual debe  TENER INSTALDO MYSQL O MARIADB, para poder usar la base datso.
+## NOTA IMPORTANTE: el gestor de base de datos sado fue MYSQL lo cual debe  TENER INSTALDO MYSQL O MARIADB, para poder usar la base datos.
 1) abrir el adminsitrador de base datos.
 
 2) crear una base datos llamda pruebajvn.
 
-3) descargar o buscar  y luego  exportar el archivo pruebajvn.sql que se encunetra dentro de la raiz del proyecto  frontempleados.
+3)la opcion de importar  en su adminsitrador de base de datosss, luego busacar el archivo pruebajvn.sql que se encunetra dentro de la raiz del proyecto  frontempleados.
 
 
 ## inicair proyecto
