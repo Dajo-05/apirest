@@ -1,7 +1,7 @@
-package com.jvn.apirestjvn.rest;
+package com.lima.apirest.rest;
 
-import com.jvn.apirestjvn.model.Empleados;
-import com.jvn.apirestjvn.service.EmpleadoService;
+import com.lima.apirest.model.Empleados;
+import com.lima.apirest.service.EmpleadoService;
 import java.net.URI;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

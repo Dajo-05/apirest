@@ -1,6 +1,6 @@
-package com.jvn.apirestjvn.repository;
+package com.lima.apirest.repository;
 
-import com.jvn.apirestjvn.model.Pais;
+import com.lima.apirest.model.Pais;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

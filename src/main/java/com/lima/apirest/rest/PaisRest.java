@@ -1,8 +1,8 @@
-package com.jvn.apirestjvn.rest;
+package com.lima.apirest.rest;
 
-import com.jvn.apirestjvn.model.Pais;
-import com.jvn.apirestjvn.repository.PaisRepository;
-import com.jvn.apirestjvn.service.PaisService;
+import com.lima.apirest.model.Pais;
+import com.lima.apirest.repository.PaisRepository;
+import com.lima.apirest.service.PaisService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
